@@ -5,11 +5,11 @@ import hikeSvg from '@assets/svgs/hike.svg?raw'
 import mountainSvg from '@assets/svgs/mountain.svg?raw'
 import locationSvg from '@assets/svgs/location.svg?raw'
 
-const { metadata } = Astro.props
-
 interface Props {
-  [key: string]: string
+  metadata: { [key: string]: string }
 }
+
+const { metadata } = Astro.props
 
 const metadataArray = Object.entries(metadata).map(([key, value]) => ({
   [key]: value,

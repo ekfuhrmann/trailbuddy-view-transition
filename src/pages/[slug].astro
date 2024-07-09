@@ -65,7 +65,7 @@ const { Content } = await entry.render()
             isStacked
           />
           <button
-            class="size-5 absolute bottom-0 right-0 top-0 mx-auto flex -translate-x-1.5 translate-y-5 items-center justify-center rounded-full bg-white text-black"
+            class="absolute bottom-0 right-0 top-0 mx-auto flex size-5 -translate-x-1.5 translate-y-5 items-center justify-center rounded-full bg-white text-black"
             transition:name={`card ${entry.slug} add`}
             ><svg
               class="size-3"
@@ -83,7 +83,7 @@ const { Content } = await entry.render()
 
         <div class="flex flex-col gap-4 text-center font-sans">
           <div
-            class="text-balance flex flex-col"
+            class="flex flex-col text-balance"
             transition:name={`card ${entry.slug} heading`}
           >
             <h1 class="text-4xl font-semibold uppercase leading-none">
@@ -110,8 +110,8 @@ const { Content } = await entry.render()
         transition:name={`card ${entry.slug} media box`}
       >
         <video
-          class="-my-px"
-          poster={`${entry.data.video}-poster.jpg`}
+          class="-my-px aspect-[5/6] object-cover"
+          poster={`${entry.data.video}-poster.png`}
           autoplay
           loop
           muted
